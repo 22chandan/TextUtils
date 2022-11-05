@@ -38,9 +38,25 @@ function App() {
         toggleMode={toggleMode}
       />
       <div className="container my-3">
+        <Routes>
+          <Route
+            exact
+            path="/TextUtils"
+            element={
+              <div className="container my-3">
+                <TextForm
+                  heading="Enter some text"
+                  mode={mode}
+                  showAlert={showAlert}
+                />
+              </div>
+            }
+          />
+        </Routes>
         {/* <TextForm heading="Enter some text" mode={mode} showAlert={showAlert} /> */}
         <Alert alert={alert} />
       </div>
+
       <Routes>
         <Route
           exact
